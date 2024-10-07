@@ -11,7 +11,7 @@ public class Main {
             int digit = n % 10; //
             sum = sum + digit;
             product = product * digit;
-            n /= 10; //убираем цифру и переходим к следующей
+            n /= 10; 
         }
         System.out.println("сумма = " + sum);
         System.out.println("произведение = " + product);
