@@ -1,0 +1,21 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] arg) {
+        //2.6. С начала суток прошло n секунд. Определить:
+        // а) сколько полных часов прошло с начала суток;
+        // б) сколько полных минут прошло с начала очередного часа;
+        // в) сколько полных секунд прошло с начала очередной минуты.
+        Scanner in = new Scanner(System.in);
+        System.out.print("sec?");
+        int n = in.nextInt();
+        int hour = n / 3600; //сколько часов
+        int hour1 = hour * 3600; //сколько прошло целых часов в секундах
+        int ost = n - hour1; //сколько секунд осталось без часов
+        int min = ost / 60; //сколько минут
+        int min1 = min * 60; //сколько прошло целых минут в секундах
+        int sec = n - (hour1 + min1);
+        System.out.println(hour);
+        System.out.println(min);
+        System.out.println(sec);
+    }
+}
