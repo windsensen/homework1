@@ -1,0 +1,19 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] arg) {
+        //2.19. Дано четырехзначное число. Найти:
+        //а) сумму его цифр;
+        //б) произведение его цифр.
+        Scanner in = new Scanner(System.in);
+        System.out.print("число?");
+        int n = in.nextInt(), sum = 0, product = 1;
+        while (n > 0) {
+            int digit = n % 10; //
+            sum = sum + digit;
+            product = product * digit;
+            n /= 10; //убираем цифру и переходим к следующей
+        }
+        System.out.println("сумма = " + sum);
+        System.out.println("произведение = " + product);
+    }
+}
